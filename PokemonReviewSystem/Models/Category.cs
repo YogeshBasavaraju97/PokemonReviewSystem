@@ -7,7 +7,7 @@ namespace PokemonReviewSystem.Models
 
 		public string Name { get; set; }
 
-		public ICollection<PokemonCatgory> PokemonCatgories { get; set; }
+		public ICollection<PokemonCategory> PokemonCategories { get; set; }
 	}
 }
 

@@ -5,7 +5,7 @@ namespace PokemonReviewSystem.Models
 	{
 		public int MyProperty { get; set; }
 
-		public int Name { get; set; }
+		public string Name { get; set; }
 
 		public ICollection<Owner> Owners {get; set;}
 	}

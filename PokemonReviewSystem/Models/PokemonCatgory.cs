@@ -1,7 +1,7 @@
 ﻿using System;
 namespace PokemonReviewSystem.Models
 {
-	public class PokemonCatgory
+	public class PokemonCategory
 	{
 		public int PokemonId { get; set; }
 

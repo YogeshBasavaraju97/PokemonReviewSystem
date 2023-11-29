@@ -9,7 +9,7 @@ namespace PokemonReviewSystem.Models
 
 		public Pokemon Pokemon { get; set; }
 
-		public Owner Owner { get; set; }
+		public Owner? Owner { get; set; }
 	}
 }
 
