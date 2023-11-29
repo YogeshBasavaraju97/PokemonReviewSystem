@@ -3,7 +3,7 @@ namespace PokemonReviewSystem.Models
 {
 	public class Country
 	{
-		public int MyProperty { get; set; }
+		public int Id { get; set; }
 
 		public string Name { get; set; }
 
