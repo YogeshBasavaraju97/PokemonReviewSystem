@@ -66,7 +66,7 @@ namespace PokemonReviewSystem.Data
         public DataContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
-            optionsBuilder.UseSqlServer("Server=localhost,1433; Database=PokemonReview; User Id=sa; Password= Admin@1234; encrypt=true; Trusted_Connection=true;");
+            optionsBuilder.UseSqlServer("Server=localhost,1433; Database=PokemonReview; User Id=sa; Password=Admin@1234; encrypt=True; trustServerCertificate=True;");
 
             return new DataContext(optionsBuilder.Options);
         }
