@@ -8,9 +8,7 @@ namespace PokemonReviewSystem.Data
    
     public class DataContext : DbContext
 	{
-		public DataContext(DbContextOptions<DbContext> options):base(options)
-		{
-		}
+		
 
         public DataContext(DbContextOptions options) : base(options)
         {
