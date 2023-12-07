@@ -11,7 +11,7 @@ namespace PokemonReviewSystem.Models
 
         public string? LastName { get; set; }
 
-		public ICollection<Review> Reviews { get; set; }
+		public ICollection<Review> Reviewers { get; set; }
 	}
 }
 
