@@ -21,6 +21,8 @@ public class Program
         builder.Services.AddControllers().AddJsonOptions(x =>
                                      x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
         builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
+        builder.Services.AddScoped<IOwnerRepository, OwnerRepository>();
+
         builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
         builder.Services.AddScoped<ICountryRepository, CountryRepository>();
         builder.Services.AddScoped<IReviewRepository, ReviewRepository>();

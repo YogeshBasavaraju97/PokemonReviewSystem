@@ -14,6 +14,11 @@ namespace PokemonReviewSystem.Repository
             _context = context;
         }
 
+        public bool CreateCountry(Country country)
+        {
+            _context.Add(country);
+            return Save();
+        }
         public bool CountryExists(int countryId)
         {
             return _context.Countries.Any(c => c.Id == countryId);
@@ -38,6 +43,11 @@ namespace PokemonReviewSystem.Repository
         {
             return _context.Owners.Where(c => c.Country.Id == countryId).ToList();
 
+        }
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
         }
     }
 }
