@@ -15,6 +15,7 @@ namespace PokemonReviewSystem.Controllers
 
 
         private readonly IReviewRepository _reviewRepository;
+        private readonly IPokemonRepository _pokemonRepository;
         private readonly IMapper _mapper;
         public ReviewController(IReviewRepository reviewRepository,
            IMapper mapper)
@@ -64,6 +65,8 @@ namespace PokemonReviewSystem.Controllers
 
             return Ok(reviews);
         }
+
+        
     }
 }
 

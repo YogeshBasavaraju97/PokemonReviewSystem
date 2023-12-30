@@ -16,7 +16,11 @@ namespace PokemonReviewSystem.Repository
             _context = context;
             _mapper = mapper;
         }
-
+        public bool CreateReview(Review review)
+        {
+            _context.Add(review);
+            return Save();
+        }
         public Reviewer GetReviewer(int reviewerId)
         {
             return _context.Reviewers.Where(r => r.ReviewerId == reviewerId).FirstOrDefault();
@@ -36,7 +40,11 @@ namespace PokemonReviewSystem.Repository
         {
             return _context.Reviewers.Any(r => r.ReviewerId == reviewerId);
         }
-
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
+        }
     }
 }
 

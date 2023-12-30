@@ -23,6 +23,7 @@ namespace PokemonReviewSystem.Repository
 
             var pokemonOwner = new PokemonOwner()
             {
+                
                 Owner = pokemonOwnerEntity,
                 Pokemon = pokemon,
 
